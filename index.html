@@ -38,12 +38,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <i class="fa fa-phone" aria-hidden="true"></i>
+            <i class="fa fa-phone phoneIcon" aria-hidden="true"></i>
             <a class="phoneNumber" href="tel:+917026010111"
               >: +91 702 601 0111</a
             >
             <span
-              >| <i class="fa fa-envelope"></i>
+              >| <i class="fa fa-envelope fa-envelopeIcon"></i>
               <a class="Email" href="mailto:info@justwashapp.com"
                 >: info@justwashapp.com</a
               ></span
@@ -556,7 +556,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="text">
+            <div class="text pb-5 mb-5">
               <div class="card px-5">
                 <h4 class="text-center">WHY CHOOSE JUSTWASH ?</h4>
                 <p>
@@ -593,7 +593,7 @@
           <div class="Icontext">
             <p>HAPPY CLIENTS</p>
 
-            <span><strong>16,130</strong></span>
+            <span class="counter">16,130</span>
           </div>
         </div>
 
@@ -606,7 +606,7 @@
           <div class="Icontext">
             <p>CAR WASHES</p>
 
-            <span><strong>1,09,200</strong></span>
+            <span class="counter">1,09,200</span>
           </div>
         </div>
 
@@ -619,7 +619,7 @@
           <div class="Icontext">
             <p>FOLLOWERS</p>
 
-            <span><strong>2,300</strong></span>
+            <span class="counter">2,300</span>
           </div>
         </div>
         <div
@@ -631,11 +631,21 @@
           <div class="Icontext">
             <p>COLLABORATIONS</p>
 
-            <span><strong>23</strong></span>
+            <span class="counter">23</span>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".counter").counterUp({
+          delay: 10,
+          time: 1000,
+        });
+      });
+    </script>
 
     <hr
       style="
@@ -1056,7 +1066,7 @@
     <!-- B2B Clients -->
 
     <!-- Footer -->
-    <footer class="py-5" style="background-color: #000; height: 50vh">
+    <footer class="py-5 px-5" style="background-color: #000">
       <div>
         <div class="container-fluid px-5">
           <div class="row">
@@ -1111,14 +1121,46 @@
                 </p>
               </div>
 
-              <div class="col-md-4">
-                <h4 class="text-sm-start">
-                  <strong>STORE</strong> Information
-                </h4>
-              </div>
               <div class="col-md-3">
+                <h4 class="text-sm-star"><strong>STORE</strong> Information</h4>
+                <div>
+                  <p class="phoneNumberText text-left">Phone Number</p>
+                  <div class="text-left">
+                    <i
+                      class="fa fa-phone phoneIconFooter"
+                      aria-hidden="true"
+                    ></i>
+                    <a class="phoneNumberFooter" href="tel:+917026010111"
+                      >: +91 702 601 0111</a
+                    >
+                  </div>
+                  <div>
+                    <p class="phoneNumberText text-left">EmailAddress</p>
+                    <div class="text-left">
+                      <i class="fa fa-envelope fa-envelopeIconFooter"></i>
+                      <a
+                        class="Email phoneNumberFooter"
+                        href="mailto:info@justwashapp.com"
+                        >: info@justwashapp.com</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mx-auto">
                 <div>
                   <h4 class="text-sm-start"><strong>LOCATION</strong></h4>
+                  <div>
+                    <h6 style="margin-top: 30px">
+                      Address
+                      <i class="fa-solid fa-location-dot"></i>
+                    </h6>
+
+                    <p style="color: #2fdab8; padding-top: 5px">
+                      484, 2nd floor, 17th Cross, 27th Main Road Sector 2, HSR
+                      Layout, Bengaluru, Karnataka 560102
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1128,7 +1170,23 @@
     </footer>
 
     <!-- Footer -->
-
     <script src="js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
+    <script>
+      jQuery(document).ready(function () {
+        jQuery(".counter").counterUp({
+          delay: 20,
+          time: 1000,
+        });
+      });
+    </script>
   </body>
 </html>
